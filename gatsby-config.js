@@ -40,6 +40,7 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-less',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
