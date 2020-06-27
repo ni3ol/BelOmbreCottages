@@ -29,6 +29,13 @@ module.exports = {
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        allExtensions: true, // defaults to false
+      },
+    },
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
