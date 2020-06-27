@@ -35,8 +35,10 @@
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "gatsby-plugin-eslint": "^2.0.8",
     "netlify-cli": "^2.54.0",
     "prettier": "^2.0.5",
     "typescript-plugin-css-modules": "^2.3.0"
