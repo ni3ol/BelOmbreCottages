@@ -1,39 +1,36 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import Hero from '../components/hero';
 import Layout from '../components/layout';
 import ArticlePreview from '../components/article-preview';
 
-class RootIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges');
-    const [author] = get(this, 'props.data.allContentfulPerson.edges');
-
-    return (
-      <Layout>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+const RootIndex = (props: any) => {
+  const siteTitle = get(props, 'data.site.siteMetadata.title');
+  const posts = get(props, 'data.allContentfulBlogPost.edges');
+  const [author] = get(props, 'data.allContentfulPerson.edges');
+  return (
+    <Layout>
+      <div style={{ background: '#fff' }}>
+        <Helmet title={siteTitle} />
+        <Hero data={author.node} />
+        <div className="wrapper">
+          <h2 className="section-headline">Recent articles</h2>
+          <ul className="article-list">
+            {posts.map(({ node }: { node: any }) => {
+              return (
+                <li key={node.slug}>
+                  <ArticlePreview article={node} />
+                </li>
+              );
+            })}
+          </ul>
         </div>
-      </Layout>
-    );
-  }
-}
+      </div>
+    </Layout>
+  );
+};
 
 export default RootIndex;
 

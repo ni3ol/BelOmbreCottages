@@ -8,6 +8,7 @@
     "url": "https://github.com/contentful/starter-gatsby-blog/issues"
   },
   "dependencies": {
+    "@types/react-helmet": "^6.0.0",
     "bluebird": "^3.7.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.23.11",

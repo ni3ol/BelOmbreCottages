@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-
-// @ts-ignore
 import styles from './article-preview.module.css';
 
 export default ({ article }: { article: any }) => (

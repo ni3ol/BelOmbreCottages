@@ -1,49 +1,45 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 import get from 'lodash/get';
 import Img from 'gatsby-image';
+import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
-
-// @ts-ignore
 import heroStyles from '../components/hero.module.css';
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = get(this.props, 'data.contentfulBlogPost');
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+const BlogPostTemplate = (props: any) => {
+  const post = get(props, 'data.contentfulBlogPost');
+  const siteTitle = get(props, 'data.site.siteMetadata.title');
 
-    return (
-      <Layout>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
-            <Img
-              className={heroStyles.heroImage}
-              alt={post.title}
-              fluid={post.heroImage.fluid}
-            />
-          </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {post.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
-          </div>
+  return (
+    <Layout>
+      <div style={{ background: '#fff' }}>
+        <Helmet title={`${post.title} | ${siteTitle}`} />
+        <div className={heroStyles.hero}>
+          <Img
+            className={heroStyles.heroImage}
+            alt={post.title}
+            fluid={post.heroImage.fluid}
+          />
         </div>
-      </Layout>
-    );
-  }
-}
+        <div className="wrapper">
+          <h1 className="section-headline">{post.title}</h1>
+          <p
+            style={{
+              display: 'block',
+            }}
+          >
+            {post.publishDate}
+          </p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: post.body.childMarkdownRemark.html,
+            }}
+          />
+        </div>
+      </div>
+    </Layout>
+  );
+};
 
 export default BlogPostTemplate;
 

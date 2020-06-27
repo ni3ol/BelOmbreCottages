@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const Promise = require('bluebird');
 const path = require('path');
 
