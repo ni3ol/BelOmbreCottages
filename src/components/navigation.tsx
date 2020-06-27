@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 // @ts-ignore
-import styles from './navigation.module.css'
+import styles from './navigation.module.css';
 
 export default () => (
   <nav role="navigation">
@@ -14,4 +14,4 @@ export default () => (
       </li>
     </ul>
   </nav>
-)
+);

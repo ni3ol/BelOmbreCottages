@@ -1,11 +1,11 @@
-const Promise = require("bluebird");
-const path = require("path");
+const Promise = require('bluebird');
+const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve("./src/templates/blog-post.tsx");
+    const blogPost = path.resolve('./src/templates/blog-post.tsx');
     resolve(
       graphql(
         `
@@ -19,7 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           }
-        `
+        `,
       ).then((result) => {
         if (result.errors) {
           console.log(result.errors);
@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           });
         });
-      })
+      }),
     );
   });
 };

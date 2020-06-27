@@ -1,10 +1,10 @@
-import React from 'react'
-import Img from 'gatsby-image'
+import React from 'react';
+import Img from 'gatsby-image';
 
 // @ts-ignore
-import styles from './hero.module.css'
+import styles from './hero.module.css';
 
-export default ({ data }) => (
+export default ({ data }: { data: any }) => (
   <div className={styles.hero}>
     <Img
       className={styles.heroImage}
@@ -17,4 +17,4 @@ export default ({ data }) => (
       <p>{data.shortBio.shortBio}</p>
     </div>
   </div>
-)
+);
