@@ -24,28 +24,63 @@ if (!spaceId || !accessToken) {
   );
 }
 
+const siteMetadata = {
+  title: 'My site',
+  titleTemplate: '%s - My site',
+  siteUrl: 'https://mysite.co.za',
+  image: 'images/my-site.png',
+  description: 'My shiny new Gatsby site',
+  keywords: ['Gatsby', 'shiny', 'site'],
+};
+
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Contentful starter',
-  },
-  pathPrefix: '/gatsby-contentful-starter',
+  siteMetadata,
   plugins: [
+    // SEO
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: 'gatsby-plugin-sitemap',
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        isTSX: true, // defaults to false
-        allExtensions: true, // defaults to false
+        host: siteMetadata.siteUrl,
+        sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    'gatsby-plugin-eslint',
-    'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-less',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: ['/*'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
+    // CMS
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
+    // Assets
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-less',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: `${__dirname}/src/assets/`,
+        },
+      },
+    },
+    // Dev
+    'gatsby-plugin-eslint',
   ],
 };

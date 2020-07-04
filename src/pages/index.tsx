@@ -1,19 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import { Helmet } from 'react-helmet';
 import Hero from '../components/hero';
 import Layout from '../components/layout';
 import ArticlePreview from '../components/article-preview';
+import { SEO } from '../components/seo';
 
 const RootIndex = (props: any) => {
-  const siteTitle = get(props, 'data.site.siteMetadata.title');
   const posts = get(props, 'data.allContentfulBlogPost.edges');
   const [author] = get(props, 'data.allContentfulPerson.edges');
   return (
     <Layout>
       <div style={{ background: '#fff' }}>
-        <Helmet title={siteTitle} />
+        <SEO />
         <Hero data={author.node} />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>

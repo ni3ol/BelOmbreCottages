@@ -1,18 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import { Helmet } from 'react-helmet';
 import styles from './blog.module.css';
 import Layout from '../components/layout';
 import ArticlePreview from '../components/article-preview';
+import { SEO } from '../components/seo';
 
 const BlogIndex = (props: any) => {
-  const siteTitle = get(props, 'data.site.siteMetadata.title');
   const posts = get(props, 'data.allContentfulBlogPost.edges');
   return (
     <Layout>
       <div style={{ background: '#fff' }}>
-        <Helmet title={siteTitle} />
+        <SEO />
         <div className={styles.hero}>Blog</div>
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
