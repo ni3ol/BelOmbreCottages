@@ -3,6 +3,8 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import {
   Grid,
   Header,
@@ -18,10 +20,9 @@ import { send } from 'emailjs-com';
 import { DateInput } from 'semantic-ui-calendar-react';
 import Layout from '../components/layout';
 import { Media, MediaContextProvider } from '../media';
-import Main from '../images/flower.png';
 import { getEmailError, getInputError } from '../helpers/form-validation';
 
-const Rates = () => {
+const Rates = ({ data }: { data: any }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
@@ -82,7 +83,7 @@ const Rates = () => {
                 width={6}
                 style={{ display: 'flex', flexDirection: 'column' }}
               >
-                <img src={Main} />
+                <Img fluid={data.flower.childImageSharp.fluid} />
                 <Header
                   as="h1"
                   style={{
@@ -295,9 +296,12 @@ const Rates = () => {
             </Grid>
           </Container>
         </Media>
-        <Media lessThan="tablet">
+        <Media at="mobile">
           <Container style={{ marginBottom: 80, marginTop: 80 }}>
-            <img src={Main} />
+            <Img
+              style={{ display: 'flex', margin: 'auto' }}
+              fluid={data.flower.childImageSharp.fluid}
+            />
             <Header
               as="h1"
               style={{
@@ -511,3 +515,17 @@ const Rates = () => {
 };
 
 export default Rates;
+
+export const query = graphql`
+  query {
+    flower: file(relativePath: { eq: "flower.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`;

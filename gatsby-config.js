@@ -3,6 +3,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const path = require(`path`);
+
 const siteMetadata = {
   title: 'My site',
   titleTemplate: '%s - My site',
@@ -46,6 +48,13 @@ module.exports = {
       options: {
         fonts: ['Tangerine'],
         display: 'swap',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     // Assets
