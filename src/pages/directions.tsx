@@ -3,7 +3,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Button, Container, Header, List } from 'semantic-ui-react';
-import { MediaContextProvider, Media } from '../media';
 
 const directions = [
   'Take the N2 from the Airport to Cape Town',
@@ -19,54 +18,27 @@ const directions = [
 
 const RootIndex = ({ data }: { data: any }) => {
   return (
-    <MediaContextProvider>
-      <Media greaterThanOrEqual="tablet">
-        <Container>
-          <Header style={{ marginTop: 20 }} as="h1">
-            Bel Ombre Cottages Directions
-          </Header>
-          <List ordered size="big">
-            {directions.map((item) => (
-              <List.Item>{item}</List.Item>
-            ))}
-          </List>
-          <Button
-            style={{ marginBottom: 20 }}
-            primary
-            onClick={() => window.print()}
-          >
-            Print directions
-          </Button>
-          <Img
-            style={{ display: 'flex' }}
-            fixed={data.desktop.childImageSharp.fixed}
-          />
-        </Container>
-      </Media>
-      <Media at="mobile">
-        <Container>
-          <Header style={{ marginTop: 20 }} as="h1">
-            Bel Ombre Cottages Directions
-          </Header>
-          <List ordered size="big">
-            {directions.map((item) => (
-              <List.Item>{item}</List.Item>
-            ))}
-          </List>
-          <Button
-            style={{ marginBottom: 20 }}
-            primary
-            onClick={() => window.print()}
-          >
-            Print directions
-          </Button>
-          <Img
-            style={{ display: 'flex', margin: 'auto' }}
-            fixed={data.mobile.childImageSharp.fixed}
-          />
-        </Container>
-      </Media>
-    </MediaContextProvider>
+    <Container>
+      <Header style={{ marginTop: 20 }} as="h1">
+        Bel Ombre Cottages Directions
+      </Header>
+      <List ordered size="big">
+        {directions.map((item) => (
+          <List.Item>{item}</List.Item>
+        ))}
+      </List>
+      <Button
+        style={{ marginBottom: 20 }}
+        primary
+        onClick={() => window.print()}
+      >
+        Print directions
+      </Button>
+      <Img
+        style={{ display: 'flex', margin: 'auto' }}
+        fluid={data.map.childImageSharp.fluid}
+      />
+    </Container>
   );
 };
 
@@ -74,21 +46,12 @@ export default RootIndex;
 
 export const query = graphql`
   query {
-    desktop: file(relativePath: { eq: "map.png" }) {
+    map: file(relativePath: { eq: "map.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 400, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    mobile: file(relativePath: { eq: "map.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 300, height: 200) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
