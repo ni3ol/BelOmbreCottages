@@ -1,0 +1,11 @@
+.header {
+  font-family: Tangerine !important;
+  font-size: 120px !important;
+  font-weight: 100 !important;
+  text-align: center;
+}
+
+.body {
+  display: flex !important;
+  align-items: center !important;
+}

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import { Menu, Sidebar, Icon, Header, MenuItem } from 'semantic-ui-react';
 import styles from './navigation.module.css';
 import { Media } from '../media';
-import { Menu, Sidebar, Icon, Header, MenuItem } from 'semantic-ui-react';
 
 export default () => {
   const [isVisible, setVisible] = useState(false);
@@ -21,10 +21,10 @@ export default () => {
                 <Link to="/cottages">Cottages</Link>
               </li>
               <li className={styles.navigationItem}>
-                <Link to="/facilities/">Facilities</Link>
+                <Link to="/rates/">Rates</Link>
               </li>
               <li className={styles.navigationItem}>
-                <Link to="/rates/">Rates</Link>
+                <Link to="/gallery/">Gallery</Link>
               </li>
               <li className={styles.navigationItem}>
                 <Link to="/contact-us/">Contact us</Link>
@@ -55,16 +55,53 @@ export default () => {
                 flexDirection: 'column',
                 alignItems: 'center',
                 padding: 20,
+                fontWeight: 'bold',
+                borderBottom: '1px solid',
               }}
             >
               <Link to="/">Bel Ombre Cottages</Link>
             </div>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: 20,
+              }}
+            >
+              <Link to="/cottages">Cottages</Link>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: 20,
+              }}
+            >
+              <Link to="/rates/">Rates</Link>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: 20,
+              }}
+            >
+              <Link to="/gallery/">Gallery</Link>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: 20,
+              }}
+            >
+              <Link to="/contact-us/">Contact us</Link>
+            </div>
           </Menu.Item>
-          <MenuItem name="Home" to="/" />
-          <MenuItem name="Cottages" to="/cottages" />
-          <MenuItem name="Facilities" to="/facilities" />
-          <MenuItem name="Rates" to="/rates" />
-          <MenuItem name="Contact us" to="/contact-us" />
         </Sidebar>
         <Sidebar.Pushable>
           <Sidebar.Pusher
@@ -78,7 +115,7 @@ export default () => {
               }}
             >
               <Menu.Item>
-              <Link to="/">Bel Ombre Cottages</Link>
+                <Link to="/">Bel Ombre Cottages</Link>
               </Menu.Item>
               <Menu.Menu position="right">
                 <Menu.Item

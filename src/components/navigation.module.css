@@ -10,6 +10,10 @@
   font-size: 1.25em;
 }
 
+.header {
+  font-family: Avenir, Tahoma, Arial, Helvetica, sans-serif !important;
+}
+
 .navigationItem {
   display: inline-flex;
   align-items: center;

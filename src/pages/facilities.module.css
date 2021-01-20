@@ -1,0 +1,16 @@
+.header {
+  font-family: Tangerine !important;
+  font-size: 120px !important;
+  font-weight: 100 !important;
+  text-align: center;
+}
+
+.body {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.listItem {
+  line-height: 1.8 !important;
+  font-size: 18px;
+}

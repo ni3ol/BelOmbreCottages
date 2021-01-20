@@ -1,6 +1,6 @@
 import React from 'react';
 import './base.css';
-import Container from './container';
+import { Container } from 'semantic-ui-react';
 import Navigation from './navigation';
 
 const Template = ({ children }: { children: any }) => {

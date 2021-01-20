@@ -1,0 +1,40 @@
+.hero {
+  margin-bottom: 100px !important;
+}
+
+.header {
+  font-family: Tangerine !important;
+  font-size: 120px !important;
+  font-weight: 100 !important;
+  text-align: center;
+  margin: none !important;
+}
+
+.subheader {
+  font-family: Avenir, Tahoma, Arial, Helvetica, sans-serif !important;
+  font-family: Tangerine !important;
+  font-size: 70px !important;
+  text-align: center;
+  margin: 20px !important;
+  font-weight: 100 !important;
+}
+
+.body {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 80px !important;
+}
+
+
+/* .cta {
+  background-color: #ABD07B !important;
+  color: white !important;
+  margin-top: 50px !important;
+
+} */
+
+p {
+  font-family: Avenir, Tahoma, Arial, Helvetica, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.8;
+}

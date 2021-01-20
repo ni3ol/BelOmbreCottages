@@ -1,0 +1,28 @@
+.header {
+  font-family: Tangerine !important;
+  font-size: 120px !important;
+  font-weight: 100 !important;
+  text-align: center;
+  margin-bottom: 50px !important;
+}
+
+.cottageHeader {
+  font-family: Tangerine !important;
+  font-size: 80px !important;
+  font-weight: 100 !important;
+  text-align: center;
+}
+
+.subHeader {
+  font-family: Avenir, Tahoma, Arial, Helvetica, sans-serif !important;
+  font-size: 28px !important;
+  text-align: center;
+}
+
+.cottage {
+  margin-bottom: 80px !important;
+}
+
+.hero {
+  margin-bottom: 80px !important;
+}

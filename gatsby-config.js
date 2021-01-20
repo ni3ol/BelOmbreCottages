@@ -41,6 +41,13 @@ module.exports = {
         allExtensions: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: ['Tangerine'],
+        display: 'swap',
+      },
+    },
     // Assets
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
