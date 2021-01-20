@@ -14,18 +14,14 @@ import {
   TextArea,
   Input,
 } from 'semantic-ui-react';
-import axios from 'axios';
+import { send } from 'emailjs-com';
+import { DateInput } from 'semantic-ui-calendar-react';
 import Layout from '../components/layout';
 import { Media, MediaContextProvider } from '../media';
 import Main from '../images/flower.png';
 import { getEmailError, getInputError } from '../helpers/form-validation';
 
 const Rates = () => {
-  const contactUrl = 'http://localhost:5000/contact-us';
-  if (!contactUrl) {
-    throw Error(`EASYESCROW_CONTACT_URL environment variable required`);
-  }
-
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
@@ -33,17 +29,24 @@ const Rates = () => {
 
   const [name, setName] = useState<string | undefined>(undefined);
   const [email, setEmail] = useState<string | undefined>(undefined);
-  const [cellphone, setCellphone] = useState<string | undefined>(undefined);
+  const [contact, setContact] = useState<string | undefined>(undefined);
+  const [arrival, setArrival] = useState<string | undefined>(undefined);
+  const [departure, setDeparture] = useState<string | undefined>(undefined);
+  const [adults, setAdults] = useState<string | undefined>(undefined);
+  const [children, setChildren] = useState<string | undefined>(undefined);
   const [message, setMessage] = useState<string | undefined>(undefined);
 
-  const submit = async () => {
-    const body = {
-      name,
-      email,
-      cellphone,
-      message,
-    };
+  const handleArrivalChange = (
+    event: any,
+    { name, value }: { name: any; value: any },
+  ) => setArrival(value);
 
+  const handleDepartureChange = (
+    event: any,
+    { name, value }: { name: any; value: any },
+  ) => setDeparture(value);
+
+  const submit = async () => {
     setHasBeenSubmitted(true);
 
     const canSubmit = name && email && message;
@@ -51,11 +54,19 @@ const Rates = () => {
     if (canSubmit) {
       try {
         setIsLoading(true);
-        await axios.post(contactUrl, body);
+        await send('service_cygh46b', 'template_jsolrkh', {
+          name,
+          email,
+          contact,
+          arrival,
+          departure,
+          adults,
+          children,
+          message,
+        });
         setIsLoading(false);
         setShowSuccess(true);
       } catch (e) {
-        console.log(e);
         setIsLoading(false);
         setHasError(true);
       }
@@ -91,7 +102,7 @@ const Rates = () => {
                   <>
                     <Message
                       header="Success!"
-                      content="Your message was sent successfully. We'll get back to you in the next few hours :)"
+                      content="Your message was sent successfully. The Bel Ombre team will get back to you shortly"
                     />
                     <a href="/">
                       <Button primary>Back home</Button>
@@ -147,11 +158,11 @@ const Rates = () => {
                         <div style={{ width: '48%' }}>
                           <Form.Field
                             control={Input}
-                            value={cellphone}
+                            value={contact}
                             label="Contact number"
                           >
                             <input
-                              onChange={(e) => setCellphone(e.target.value)}
+                              onChange={(e) => setContact(e.target.value)}
                               placeholder="0831234567"
                               style={{ borderColor: '#eaeaea' }}
                             />
@@ -165,32 +176,24 @@ const Rates = () => {
                         }}
                       >
                         <div style={{ width: '48%' }}>
-                          <Form.Field
-                            style={{ paddingBottom: 24 }}
-                            control={Input}
-                            // value={email}
+                          <DateInput
+                            name="date"
+                            placeholder="Date"
+                            value={arrival}
                             label="Arrival date"
-                            // error={getEmailError({ hasBeenSubmitted, email })}
-                          >
-                            <input
-                              // onChange={(e) => setEmail(e.target.value)}
-                              // placeholder="jason@gmail.com"
-                              style={{ borderColor: '#eaeaea' }}
-                            />
-                          </Form.Field>
+                            iconPosition="left"
+                            onChange={handleArrivalChange}
+                          />
                         </div>
-                        <div style={{ width: '48%' }}>
-                          <Form.Field
-                            control={Input}
-                            // value={cellphone}
+                        <div style={{ width: '48%', paddingBottom: 20 }}>
+                          <DateInput
+                            name="date"
+                            placeholder="Date"
+                            value={departure}
                             label="Departure date"
-                          >
-                            <input
-                              // onChange={(e) => setCellphone(e.target.value)}
-                              // placeholder="0831234567"
-                              style={{ borderColor: '#eaeaea' }}
-                            />
-                          </Form.Field>
+                            iconPosition="left"
+                            onChange={handleDepartureChange}
+                          />
                         </div>
                       </div>
                       <div
@@ -203,13 +206,12 @@ const Rates = () => {
                           <Form.Field
                             style={{ paddingBottom: 24 }}
                             control={Input}
-                            // value={email}
+                            value={adults}
+                            type="number"
                             label="Adults"
-                            // error={getEmailError({ hasBeenSubmitted, email })}
                           >
                             <input
-                              // onChange={(e) => setEmail(e.target.value)}
-                              // placeholder="jason@gmail.com"
+                              onChange={(e) => setAdults(e.target.value)}
                               style={{ borderColor: '#eaeaea' }}
                             />
                           </Form.Field>
@@ -217,12 +219,12 @@ const Rates = () => {
                         <div style={{ width: '48%' }}>
                           <Form.Field
                             control={Input}
-                            // value={cellphone}
+                            type="number"
+                            value={children}
                             label="Children"
                           >
                             <input
-                              // onChange={(e) => setCellphone(e.target.value)}
-                              // placeholder="0831234567"
+                              onChange={(e) => setChildren(e.target.value)}
                               style={{ borderColor: '#eaeaea' }}
                             />
                           </Form.Field>
@@ -272,7 +274,6 @@ const Rates = () => {
                   height="100%"
                   frameBorder="0"
                   style={{ border: 0 }}
-                  // allowFullScreen=""
                   aria-hidden="false"
                   tabIndex={0}
                 />
@@ -315,7 +316,7 @@ const Rates = () => {
               <>
                 <Message
                   header="Success!"
-                  content="Your message was sent successfully. We'll get back to you in the next few hours :)"
+                  content="Your message was sent successfully. The Bel Ombre team will get back to you shortly."
                 />
                 <a href="/">
                   <Button primary>Back home</Button>
@@ -371,11 +372,11 @@ const Rates = () => {
                     <div style={{ width: '48%' }}>
                       <Form.Field
                         control={Input}
-                        value={cellphone}
+                        value={contact}
                         label="Contact number"
                       >
                         <input
-                          onChange={(e) => setCellphone(e.target.value)}
+                          onChange={(e) => setContact(e.target.value)}
                           placeholder="0831234567"
                           style={{ borderColor: '#eaeaea' }}
                         />
@@ -388,33 +389,25 @@ const Rates = () => {
                       justifyContent: 'space-between',
                     }}
                   >
-                    <div style={{ width: '48%' }}>
-                      <Form.Field
-                        style={{ paddingBottom: 24 }}
-                        control={Input}
-                        // value={email}
+                    <div style={{ width: '48%', paddingBottom: 20 }}>
+                      <DateInput
+                        name="date"
+                        placeholder="Date"
+                        value={arrival}
                         label="Arrival date"
-                        // error={getEmailError({ hasBeenSubmitted, email })}
-                      >
-                        <input
-                          // onChange={(e) => setEmail(e.target.value)}
-                          // placeholder="jason@gmail.com"
-                          style={{ borderColor: '#eaeaea' }}
-                        />
-                      </Form.Field>
+                        iconPosition="left"
+                        onChange={handleArrivalChange}
+                      />
                     </div>
                     <div style={{ width: '48%' }}>
-                      <Form.Field
-                        control={Input}
-                        // value={cellphone}
+                      <DateInput
+                        name="date"
+                        placeholder="Date"
+                        value={departure}
                         label="Departure date"
-                      >
-                        <input
-                          // onChange={(e) => setCellphone(e.target.value)}
-                          // placeholder="0831234567"
-                          style={{ borderColor: '#eaeaea' }}
-                        />
-                      </Form.Field>
+                        iconPosition="left"
+                        onChange={handleDepartureChange}
+                      />
                     </div>
                   </div>
                   <div
@@ -427,12 +420,12 @@ const Rates = () => {
                       <Form.Field
                         style={{ paddingBottom: 24 }}
                         control={Input}
-                        // value={email}
+                        value={adults}
+                        type="number"
                         label="Adults"
-                        // error={getEmailError({ hasBeenSubmitted, email })}
                       >
                         <input
-                          // onChange={(e) => setEmail(e.target.value)}
+                          onChange={(e) => setAdults(e.target.value)}
                           // placeholder="jason@gmail.com"
                           style={{ borderColor: '#eaeaea' }}
                         />
@@ -441,11 +434,12 @@ const Rates = () => {
                     <div style={{ width: '48%' }}>
                       <Form.Field
                         control={Input}
-                        // value={cellphone}
+                        value={children}
+                        type="number"
                         label="Children"
                       >
                         <input
-                          // onChange={(e) => setCellphone(e.target.value)}
+                          onChange={(e) => setChildren(e.target.value)}
                           // placeholder="0831234567"
                           style={{ borderColor: '#eaeaea' }}
                         />
@@ -493,7 +487,6 @@ const Rates = () => {
               height="100%"
               frameBorder="0"
               style={{ border: 0 }}
-              // allowFullScreen=""
               aria-hidden="false"
               tabIndex={0}
             />
