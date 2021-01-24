@@ -1,58 +1,58 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import c1 from '../images/c21.png';
-import c2 from '../images/c22.png';
-import c3 from '../images/c23.png';
-import c4 from '../images/c24.png';
-import c5 from '../images/c25.png';
-import c6 from '../images/c26.png';
-import c7 from '../images/c27.png';
-import c8 from '../images/c28.png';
-import c9 from '../images/c29.png';
-import c10 from '../images/c210.png';
+import d1 from '../images/d1.svg';
+import d2 from '../images/d2.svg';
+import d3 from '../images/d3.svg';
+import d4 from '../images/d4.svg';
+import d5 from '../images/d5.svg';
+import d6 from '../images/d6.svg';
+import d7 from '../images/d7.svg';
+import d8 from '../images/d8.svg';
+import d9 from '../images/d9.svg';
+import d10 from '../images/d10.svg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 
 const cottageTwo = [
   {
-    original: c1,
-    thumbnail: c1,
+    original: d1,
+    thumbnail: d1,
   },
   {
-    original: c2,
-    thumbnail: c2,
+    original: d2,
+    thumbnail: d2,
   },
   {
-    original: c3,
-    thumbnail: c3,
+    original: d3,
+    thumbnail: d3,
   },
   {
-    original: c4,
-    thumbnail: c4,
+    original: d4,
+    thumbnail: d4,
   },
   {
-    original: c5,
-    thumbnail: c5,
+    original: d5,
+    thumbnail: d5,
   },
   {
-    original: c6,
-    thumbnail: c6,
+    original: d6,
+    thumbnail: d6,
   },
   {
-    original: c7,
-    thumbnail: c7,
+    original: d7,
+    thumbnail: d7,
   },
   {
-    original: c8,
-    thumbnail: c8,
+    original: d8,
+    thumbnail: d8,
   },
   {
-    original: c9,
-    thumbnail: c9,
+    original: d9,
+    thumbnail: d9,
   },
   {
-    original: c10,
-    thumbnail: c10,
+    original: d10,
+    thumbnail: d10,
   },
 ];
 

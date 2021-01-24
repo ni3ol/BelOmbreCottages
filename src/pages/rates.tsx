@@ -1,12 +1,11 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import { Grid, Header } from 'semantic-ui-react';
 import Layout from '../components/layout';
 import { MediaContextProvider, Media } from '../media';
 import styles from './rates.module.css';
+import Flower from '../images/rates-flower.svg';
 
-const Rates = ({ data }) => (
+const Rates = () => (
   <MediaContextProvider>
     <Layout>
       <Media greaterThan="tablet">
@@ -16,11 +15,10 @@ const Rates = ({ data }) => (
           <Grid.Row className={styles.body}>
             <Grid.Column>
               <p>
-                From 
-{' '}
-<strong>R725/pp per night sharing</strong>, negotiable
-                depending on sharing
-              </p>
+                From <strong>R725/pp per night sharing</strong>
+, depending on
+                sharing
+</p>
               <p>
                 Single rates on request We require a 50% deposit to secure the
                 booking
@@ -28,11 +26,7 @@ const Rates = ({ data }) => (
               <p>No credit card facilities available</p>
             </Grid.Column>
             <Grid.Column>
-              <Img
-                style={{ width: '100%' }}
-                fluid={data.flower.childImageSharp.fluid}
-              />
-{' '}
+              <img src={Flower} />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -46,8 +40,9 @@ const Rates = ({ data }) => (
               <p>
                 From 
 {' '}
-<strong>R725/pp per night sharing</strong>, negotiable
-                depending on sharing
+<strong>R725/pp per night sharing</strong>
+, depending on
+                sharing
               </p>
               <p>
                 Single rates on request We require a 50% deposit to secure the
@@ -56,10 +51,7 @@ const Rates = ({ data }) => (
               <p>No credit card facilities available</p>
             </Grid.Column>
             <Grid.Column>
-              <Img
-                style={{ width: '100%' }}
-                fluid={data.flower.childImageSharp.fluid}
-              />
+              <img src={Flower} />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -67,36 +59,18 @@ const Rates = ({ data }) => (
       <Media at="mobile">
         <Header className={styles.header}>Rates</Header>
         <p style={{ textAlign: 'center' }}>
-          From 
-{' '}
-<strong>R725/pp per night sharing</strong>
-          , negotiable depending on sharing
+          From
+          <strong>R725/pp per night sharing</strong>
+          , depending on sharing
           <br />
           Single rates on request We require a 50% deposit to secure the booking
           <br />
           No credit card facilities available
         </p>
-        <Img
-          style={{ width: '100%' }}
-          fluid={data.flower.childImageSharp.fluid}
-        />
+        <img src={Flower} />
       </Media>
     </Layout>
   </MediaContextProvider>
 );
 
 export default Rates;
-
-export const query = graphql`
-  query {
-    flower: file(relativePath: { eq: "rates-flower.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-  }
-`;

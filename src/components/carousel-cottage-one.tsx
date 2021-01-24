@@ -1,12 +1,12 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import c1 from '../images/c11.png';
-import c2 from '../images/c12.png';
-import c3 from '../images/c13.png';
-import c4 from '../images/c14.png';
-import c5 from '../images/c15.png';
-import c6 from '../images/c16.png';
-import c7 from '../images/c17.png';
+import c1 from '../images/c1.svg';
+import c2 from '../images/c2.svg';
+import c3 from '../images/c3.svg';
+import c4 from '../images/c4.svg';
+import c5 from '../images/c5.svg';
+import c6 from '../images/c6.svg';
+import c7 from '../images/c7.svg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 

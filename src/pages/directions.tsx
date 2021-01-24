@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import { Button, Container, Header, List } from 'semantic-ui-react';
+import Map from '../images/map.svg';
 
 const directions = [
   'Take the N2 from the Airport to Cape Town',
@@ -34,26 +33,9 @@ const RootIndex = ({ data }: { data: any }) => {
       >
         Print directions
       </Button>
-      <Img
-        style={{ display: 'flex', margin: 'auto' }}
-        fluid={data.map.childImageSharp.fluid}
-      />
+      <img src={Map} />
     </Container>
   );
 };
 
 export default RootIndex;
-
-export const query = graphql`
-  query {
-    map: file(relativePath: { eq: "map.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-  }
-`;

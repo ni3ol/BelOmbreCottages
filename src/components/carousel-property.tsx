@@ -1,11 +1,11 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import p1 from '../images/h1.png';
-import p2 from '../images/h2.png';
-import p3 from '../images/h3.png';
-import p4 from '../images/h4.png';
-import p5 from '../images/h5.png';
-import p6 from '../images/h6.png';
+import p1 from '../images/b1.svg';
+import p2 from '../images/b2.svg';
+import p3 from '../images/b3.svg';
+import p4 from '../images/b4.svg';
+import p5 from '../images/b5.svg';
+import p6 from '../images/b6.svg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 

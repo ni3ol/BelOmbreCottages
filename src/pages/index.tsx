@@ -2,16 +2,17 @@
 import React from 'react';
 import { Grid, Container } from 'semantic-ui-react';
 import { init } from 'emailjs-com';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import Navigation from '../components/navigation';
 import { Media, MediaContextProvider } from '../media';
 import styles from './index.module.css';
 import { SEO } from '../components/seo';
+import Hero from '../images/hero.svg';
+import Hero1 from '../images/hero1.svg';
+import Hero2 from '../images/hero2.svg';
 
 init('user_I9XUzzlLBgjlABVvSh0m2');
 
-const RootIndex = (props: any) => {
+const RootIndex = () => {
   return (
     <>
       <script src="https://cdn.jsdelivr.net/npm/semantic-ui-calendar-react@latest/dist/umd/semantic-ui-calendar-react.js" />
@@ -20,10 +21,7 @@ const RootIndex = (props: any) => {
           <Navigation />
         </Container>
         <Media greaterThanOrEqual="tablet">
-          <Img
-            style={{ width: '100%', marginBottom: 50 }}
-            fluid={props.data.hero.childImageSharp.fluid}
-          />
+          <img src={Hero} className={styles.heroImg} />
           <Container>
             <Grid columns={2}>
               <Grid.Row className={styles.body}>
@@ -41,18 +39,12 @@ const RootIndex = (props: any) => {
                   </p>
                 </Grid.Column>
                 <Grid.Column>
-                  <Img
-                    style={{ width: '100%' }}
-                    fluid={props.data.body1.childImageSharp.fluid}
-                  />
+                  <img src={Hero1} />
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row className={styles.body}>
                 <Grid.Column>
-                  <Img
-                    style={{ width: '100%' }}
-                    fluid={props.data.body2.childImageSharp.fluid}
-                  />
+                  <img src={Hero2} />
                 </Grid.Column>
                 <Grid.Column style={{ paddingLeft: 30 }}>
                   <p>
@@ -71,10 +63,7 @@ const RootIndex = (props: any) => {
           </Container>
         </Media>
         <Media at="mobile">
-          <Img
-            style={{ width: '100%', marginBottom: 50 }}
-            fluid={props.data.hero.childImageSharp.fluid}
-          />
+          <img src={Hero} />
           <div
             style={{ paddingLeft: 20, paddingRight: 20, textAlign: 'center' }}
           >
@@ -88,10 +77,7 @@ const RootIndex = (props: any) => {
               easily explore Cape Town and then retire to the peaceful comfort
               of the well appointed cottages.
             </p>
-            <Img
-              style={{ width: '100%' }}
-              fluid={props.data.body1.childImageSharp.fluid}
-            />
+            <img src={Hero1} />
             <p>
               Over the years we have established an excellent reputation with
               our guests local and oversees, returning year after year.
@@ -101,10 +87,7 @@ const RootIndex = (props: any) => {
               Center, V&A Waterfront and airport. Close to fine restaurants,
               wine farms and golf courses.
             </p>
-            <Img
-              style={{ width: '100%' }}
-              fluid={props.data.body2.childImageSharp.fluid}
-            />
+            <img src={Hero2} />
           </div>
         </Media>
       </MediaContextProvider>
@@ -113,35 +96,3 @@ const RootIndex = (props: any) => {
 };
 
 export default RootIndex;
-
-export const query = graphql`
-  query {
-    hero: file(relativePath: { eq: "heroover.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-    body1: file(relativePath: { eq: "index-body1.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-    body2: file(relativePath: { eq: "index-body2.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-  }
-`;

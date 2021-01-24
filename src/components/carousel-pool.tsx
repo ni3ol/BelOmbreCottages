@@ -1,9 +1,8 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import p1 from '../images/p1.png';
-import p2 from '../images/p2.png';
-import p3 from '../images/p3.png';
-import p4 from '../images/p4.png';
+import p1 from '../images/p1.svg';
+import p2 from '../images/p2.svg';
+import p3 from '../images/p3.svg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 
@@ -19,10 +18,6 @@ const pool = [
   {
     original: p3,
     thumbnail: p3,
-  },
-  {
-    original: p4,
-    thumbnail: p4,
   },
 ];
 

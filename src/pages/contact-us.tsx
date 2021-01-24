@@ -3,8 +3,6 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import {
   Grid,
   Header,
@@ -21,8 +19,9 @@ import { DateInput } from 'semantic-ui-calendar-react';
 import Layout from '../components/layout';
 import { Media, MediaContextProvider } from '../media';
 import { getEmailError, getInputError } from '../helpers/form-validation';
+import Flower from '../images/contact-flower.svg';
 
-const Rates = ({ data }: { data: any }) => {
+const Rates = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
@@ -83,7 +82,7 @@ const Rates = ({ data }: { data: any }) => {
                 width={6}
                 style={{ display: 'flex', flexDirection: 'column' }}
               >
-                <Img fluid={data.flower.childImageSharp.fluid} />
+                <img src={Flower} />
                 <Header
                   as="h1"
                   style={{
@@ -94,6 +93,9 @@ const Rates = ({ data }: { data: any }) => {
                 >
                   Contact details
                 </Header>
+                <p>
+                  <strong>Anita Gildenhuys</strong>
+                </p>
                 <p>Email: belombre@mweb.co.za</p>
                 <p>Tel: +27 021 794 3461</p>
                 <p>Cell: +27 083 794 3461</p>
@@ -110,7 +112,15 @@ const Rates = ({ data }: { data: any }) => {
                     </a>
                   </>
                 ) : (
-                  <Segment style={{ padding: 30 }} className="contact">
+                  <Segment
+                    style={{
+                      padding: 30,
+                      border: 'none',
+                      boxShadow:
+                        'rgba(25, 28, 31, 0.08) 0px 14px 32px, rgba(25, 28, 31, 0.04) 0px 8px 16px, rgba(25, 28, 31, 0.04) 0px -1px 0px',
+                    }}
+                    className="contact"
+                  >
                     <Header as="h3" textAlign="center" style={{ fontSize: 24 }}>
                       Send an enquiry
                     </Header>
@@ -287,7 +297,7 @@ const Rates = ({ data }: { data: any }) => {
                   <br />
                   Cape Town
                   <br />
-                  7808
+                  7806
                 </p>
                 <a target="_blank" href="/directions">
                   <Button primary>Open printable directions</Button>
@@ -298,10 +308,7 @@ const Rates = ({ data }: { data: any }) => {
         </Media>
         <Media at="mobile">
           <Container style={{ marginBottom: 80, marginTop: 80 }}>
-            <Img
-              style={{ display: 'flex', margin: 'auto' }}
-              fluid={data.flower.childImageSharp.fluid}
-            />
+            <img src={Flower} />
             <Header
               as="h1"
               style={{
@@ -312,6 +319,9 @@ const Rates = ({ data }: { data: any }) => {
             >
               Contact details
             </Header>
+            <p>
+              <strong>Anita Gildenhuys</strong>
+            </p>
             <p>Email: belombre@mweb.co.za</p>
             <p>Tel: +27 021 794 3461</p>
             <p>Cell: +27 083 794 3461</p>
@@ -327,7 +337,15 @@ const Rates = ({ data }: { data: any }) => {
                 </a>
               </>
             ) : (
-              <Segment style={{ padding: 30 }} className="contact">
+              <Segment
+                style={{
+                  padding: 30,
+                  border: 'none',
+                  boxShadow:
+                    'rgba(25, 28, 31, 0.08) 0px 14px 32px, rgba(25, 28, 31, 0.04) 0px 8px 16px, rgba(25, 28, 31, 0.04) 0px -1px 0px',
+                }}
+                className="contact"
+              >
                 <Header as="h3" textAlign="center" style={{ fontSize: 24 }}>
                   Send an enquiry
                 </Header>
@@ -430,7 +448,6 @@ const Rates = ({ data }: { data: any }) => {
                       >
                         <input
                           onChange={(e) => setAdults(e.target.value)}
-                          // placeholder="jason@gmail.com"
                           style={{ borderColor: '#eaeaea' }}
                         />
                       </Form.Field>
@@ -444,7 +461,6 @@ const Rates = ({ data }: { data: any }) => {
                       >
                         <input
                           onChange={(e) => setChildren(e.target.value)}
-                          // placeholder="0831234567"
                           style={{ borderColor: '#eaeaea' }}
                         />
                       </Form.Field>
@@ -502,7 +518,7 @@ const Rates = ({ data }: { data: any }) => {
               <br />
               Cape Town
               <br />
-              7808
+              7806
             </p>
             <a style={{ paddingBottom: 20 }} target="_blank" href="/directions">
               <Button primary>Open printable directions</Button>
@@ -515,17 +531,3 @@ const Rates = ({ data }: { data: any }) => {
 };
 
 export default Rates;
-
-export const query = graphql`
-  query {
-    flower: file(relativePath: { eq: "flower.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
-      }
-    }
-  }
-`;

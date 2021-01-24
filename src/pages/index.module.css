@@ -2,6 +2,10 @@
   margin-bottom: 100px !important;
 }
 
+.heroImg {
+  margin-bottom: 150px;
+}
+
 .header {
   font-family: Tangerine !important;
   font-size: 120px !important;
@@ -24,14 +28,6 @@
   align-items: center !important;
   margin-bottom: 80px !important;
 }
-
-
-/* .cta {
-  background-color: #ABD07B !important;
-  color: white !important;
-  margin-top: 50px !important;
-
-} */
 
 p {
   font-family: Avenir, Tahoma, Arial, Helvetica, sans-serif !important;

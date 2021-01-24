@@ -18,7 +18,7 @@ export default () => {
             </div>
             <div>
               <li className={styles.navigationItem}>
-                <Link to="/cottages">Cottages</Link>
+                <Link to="/accommodation">Accommodation</Link>
               </li>
               <li className={styles.navigationItem}>
                 <Link to="/rates/">Rates</Link>
@@ -69,7 +69,7 @@ export default () => {
                 padding: 20,
               }}
             >
-              <Link to="/cottages">Cottages</Link>
+              <Link to="/accommodation">Accommodation</Link>
             </div>
             <div
               style={{

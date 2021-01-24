@@ -1,9 +1,9 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import g1 from '../images/g1.png';
-import g2 from '../images/g2.png';
-import g3 from '../images/g3.png';
-import g4 from '../images/g4.png';
+import g1 from '../images/g1.svg';
+import g2 from '../images/g2.svg';
+import g3 from '../images/g3.svg';
+import g4 from '../images/g4.svg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 
