@@ -21,10 +21,10 @@ export default () => {
                 <Link to="/accommodation">Accommodation</Link>
               </li>
               <li className={styles.navigationItem}>
-                <Link to="/rates/">Rates</Link>
+                <Link to="/gallery/">Gallery</Link>
               </li>
               <li className={styles.navigationItem}>
-                <Link to="/gallery/">Gallery</Link>
+                <Link to="/rates/">Rates</Link>
               </li>
               <li className={styles.navigationItem}>
                 <Link to="/contact-us/">Contact us</Link>
@@ -79,7 +79,7 @@ export default () => {
                 padding: 20,
               }}
             >
-              <Link to="/rates/">Rates</Link>
+              <Link to="/gallery/">Gallery</Link>
             </div>
             <div
               style={{
@@ -89,7 +89,7 @@ export default () => {
                 padding: 20,
               }}
             >
-              <Link to="/gallery/">Gallery</Link>
+              <Link to="/rates/">Rates</Link>
             </div>
             <div
               style={{

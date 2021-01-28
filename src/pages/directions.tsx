@@ -9,13 +9,13 @@ const directions = [
   'Pass the University of Cape Town and Rhodes Memorial on right',
   'Continue through Newlands, Bishopscourt down into Constantia Valley',
   'Take exit M41 to Plumstead/Constantia/Hout Bay',
-  'At the stop sign, turn left into Constantia Main Road',
+  'Turn left into Constantia Main Road',
   'At the second set of traffic lights turn right into Brommersvlei Road',
   'Continue until you get to Rathfelder Avenue to your left',
   'The driveway entrance is at 99 Rathfelder Avenue to your left',
 ];
 
-const RootIndex = ({ data }: { data: any }) => {
+const RootIndex = () => {
   return (
     <Container>
       <Header style={{ marginTop: 20 }} as="h1">

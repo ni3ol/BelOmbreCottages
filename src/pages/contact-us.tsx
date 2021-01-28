@@ -94,11 +94,28 @@ const Rates = () => {
                   Contact details
                 </Header>
                 <p>
-                  <strong>Anita Gildenhuys</strong>
+                  <strong>Manager:</strong> Anita Gildenhuys
                 </p>
-                <p>Email: belombre@mweb.co.za</p>
-                <p>Tel: +27 021 794 3461</p>
-                <p>Cell: +27 083 794 3461</p>
+                <p>
+                  <strong>Website:</strong>
+{' '}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.belombrecottages.co.za"
+                  >
+                    www.belombrecottages.co.za
+                  </a>
+                </p>
+                <p>
+                  <strong>Email:</strong> belombre@mweb.co.za
+                </p>
+                <p>
+                  <strong>Tel:</strong> +27 021 794 3461
+                </p>
+                <p>
+                  <strong>Cell:</strong> +27 083 794 3461
+                </p>
               </Grid.Column>
               <Grid.Column>
                 {showSuccess ? (
@@ -320,11 +337,36 @@ const Rates = () => {
               Contact details
             </Header>
             <p>
-              <strong>Anita Gildenhuys</strong>
+              <strong>Manager:</strong>
+{' '}
+Anita Gildenhuys
+</p>
+            <p>
+              <strong>Website:</strong>
+{' '}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.belombrecottages.co.za"
+              >
+                www.belombrecottages.co.za
+              </a>
             </p>
-            <p>Email: belombre@mweb.co.za</p>
-            <p>Tel: +27 021 794 3461</p>
-            <p>Cell: +27 083 794 3461</p>
+            <p>
+              <strong>Tel:</strong>
+{' '}
++27 021 794 3461
+</p>
+            <p>
+              <strong>Cell:</strong>
+{' '}
++27 083 794 3461
+</p>
+            <p>
+              <strong>Email:</strong>
+{' '}
+belombre@mweb.co.za
+</p>
 
             {showSuccess ? (
               <>

@@ -49,7 +49,7 @@ const RootIndex = () => {
                 <Grid.Column style={{ paddingLeft: 30 }}>
                   <p>
                     Over the years we have established an excellent reputation
-                    with our guests local and oversees, returning year after
+                    with our local and overseas guests returning year after
                     year.
                   </p>
                   <p>
@@ -80,7 +80,7 @@ const RootIndex = () => {
             <img src={Hero1} />
             <p>
               Over the years we have established an excellent reputation with
-              our guests local and oversees, returning year after year.
+              our local and overseas guests returning year after year.
             </p>
             <p>
               Easy access onto the M3 highway, 20 minutes from Cape Town City

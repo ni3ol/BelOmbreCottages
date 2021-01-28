@@ -15,15 +15,15 @@ const Rates = () => (
           <Grid.Row className={styles.body}>
             <Grid.Column>
               <p>
-                From <strong>R725/pp per night sharing</strong>
+                From 
+{' '}
+<strong>R725/pp per night sharing</strong>
 , depending on
-                sharing
-</p>
-              <p>
-                Single rates on request We require a 50% deposit to secure the
-                booking
+                sharing.
               </p>
-              <p>No credit card facilities available</p>
+              <p>Single rates on request.</p>
+              <p>A 50% deposit is required to secure the booking.</p>
+              <p>No credit card facilities available.</p>
             </Grid.Column>
             <Grid.Column>
               <img src={Flower} />
@@ -38,17 +38,13 @@ const Rates = () => (
           <Grid.Row className={styles.body}>
             <Grid.Column>
               <p>
-                From 
-{' '}
-<strong>R725/pp per night sharing</strong>
+                From <strong>R725/pp per night sharing</strong>
 , depending on
-                sharing
-              </p>
-              <p>
-                Single rates on request We require a 50% deposit to secure the
-                booking
-              </p>
-              <p>No credit card facilities available</p>
+                sharing.
+</p>
+              <p>Single rates on request.</p>
+              <p> A 50% deposit is required to secure the booking.</p>
+              <p>No credit card facilities available.</p>
             </Grid.Column>
             <Grid.Column>
               <img src={Flower} />
@@ -59,13 +55,16 @@ const Rates = () => (
       <Media at="mobile">
         <Header className={styles.header}>Rates</Header>
         <p style={{ textAlign: 'center' }}>
-          From
-          <strong>R725/pp per night sharing</strong>
-          , depending on sharing
+          From 
+{' '}
+<strong>R725/pp per night sharing</strong>
+          , depending on sharing.
           <br />
-          Single rates on request We require a 50% deposit to secure the booking
+          Single rates on request.
           <br />
-          No credit card facilities available
+          A 50% deposit is required to secure the booking.
+          <br />
+          No credit card facilities available.
         </p>
         <img src={Flower} />
       </Media>
