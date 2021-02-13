@@ -11,15 +11,15 @@ const Gallery = () => (
   <MediaContextProvider>
     <Layout>
       <Media greaterThanOrEqual="tablet">
-        <Header className={styles.header}>Pool area</Header>
+        <Header className={styles.galleryHeader}>Pool area</Header>
         <div style={{ width: '80%', margin: 'auto' }}>
           <CarouselPool />
         </div>
-        <Header className={styles.header}>Garden</Header>
+        <Header className={styles.galleryHeader}>Garden</Header>
         <div style={{ width: '80%', margin: 'auto' }}>
           <CarouselGarden />
         </div>
-        <Header className={styles.header}>Property</Header>
+        <Header className={styles.galleryHeader}>Property</Header>
         <div style={{ width: '80%', margin: 'auto' }}>
           <CarouselProperty />
         </div>

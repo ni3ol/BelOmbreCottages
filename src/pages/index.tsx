@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { Grid, Container } from 'semantic-ui-react';
+import { Grid, Container, Header } from 'semantic-ui-react';
 import { init } from 'emailjs-com';
 import Navigation from '../components/navigation';
 import { Media, MediaContextProvider } from '../media';
@@ -22,6 +22,7 @@ const RootIndex = () => {
         </Container>
         <Media greaterThanOrEqual="tablet">
           <img src={Hero} className={styles.heroImg} />
+          <Header className={styles.header}>Bel Ombre Cottages</Header>
           <Container>
             <Grid columns={2}>
               <Grid.Row className={styles.body}>
@@ -55,7 +56,8 @@ const RootIndex = () => {
                   <p>
                     Easy access onto the M3 highway, 20 minutes from Cape Town
                     City Center, V&A Waterfront and airport. Close to fine
-                    restaurants, wine farms and golf courses.
+                    restaurants, wine farms and golf courses. The Bel Ombre
+                    Meadow and Alphen Walk are in close proximity for walking.
                   </p>
                 </Grid.Column>
               </Grid.Row>
@@ -64,6 +66,8 @@ const RootIndex = () => {
         </Media>
         <Media at="mobile">
           <img src={Hero} />
+          <Header className={styles.mobileHeader}>Bel Ombre Cottages</Header>
+
           <div
             style={{ paddingLeft: 20, paddingRight: 20, textAlign: 'center' }}
           >
@@ -85,7 +89,8 @@ const RootIndex = () => {
             <p>
               Easy access onto the M3 highway, 20 minutes from Cape Town City
               Center, V&A Waterfront and airport. Close to fine restaurants,
-              wine farms and golf courses.
+              wine farms and golf courses. The Bel Ombre Meadow and Alphen Walk
+              are in close proximity for walking.
             </p>
             <img src={Hero2} />
           </div>

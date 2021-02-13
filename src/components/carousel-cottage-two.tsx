@@ -10,6 +10,8 @@ import d7 from '../images/d7.svg';
 import d8 from '../images/d8.svg';
 import d9 from '../images/d9.svg';
 import d10 from '../images/d10.svg';
+import d11 from '../images/d11.svg';
+import d12 from '../images/d12.svg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 
@@ -39,8 +41,8 @@ const cottageTwo = [
     thumbnail: d6,
   },
   {
-    original: d7,
-    thumbnail: d7,
+    original: d12,
+    thumbnail: d12,
   },
   {
     original: d8,
@@ -53,6 +55,10 @@ const cottageTwo = [
   {
     original: d10,
     thumbnail: d10,
+  },
+  {
+    original: d11,
+    thumbnail: d11,
   },
 ];
 
