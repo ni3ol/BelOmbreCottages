@@ -40,7 +40,7 @@ const facilities = [
   '24 hour security patrolling',
   'Alarm system and safe',
   'Not accessible for wheelchairs',
-  'Cellars Hohenort and Alphen Hotels in walking distance from us',
+  'Cellars Hohenort and Alphen Hotels in walking distance',
 ];
 
 const Cottages = () => (

@@ -94,27 +94,16 @@ const Rates = () => {
                   Contact details
                 </Header>
                 <p>
-                  <strong>Manager:</strong> Anita Gildenhuys
-                </p>
-                <p>
-                  <strong>Website:</strong>
-{' '}
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.belombrecottages.co.za"
-                  >
-                    www.belombrecottages.co.za
-                  </a>
+                  <strong>Anita Gildenhuys</strong>
                 </p>
                 <p>
                   <strong>Email:</strong> belombre@mweb.co.za
                 </p>
                 <p>
-                  <strong>Tel:</strong> +27 021 794 3461
+                  <strong>Tel:</strong> +27 21 794 3461
                 </p>
                 <p>
-                  <strong>Cell:</strong> +27 083 794 3461
+                  <strong>Cell:</strong> +27 83 794 3461
                 </p>
               </Grid.Column>
               <Grid.Column>
@@ -337,36 +326,17 @@ const Rates = () => {
               Contact details
             </Header>
             <p>
-              <strong>Manager:</strong>
-{' '}
-Anita Gildenhuys
-</p>
-            <p>
-              <strong>Website:</strong>
-{' '}
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.belombrecottages.co.za"
-              >
-                www.belombrecottages.co.za
-              </a>
+              <strong>Anita Gildenhuys</strong>
             </p>
             <p>
-              <strong>Tel:</strong>
-{' '}
-+27 021 794 3461
-</p>
+              <strong>Email:</strong> belombre@mweb.co.za
+            </p>
             <p>
-              <strong>Cell:</strong>
-{' '}
-+27 083 794 3461
-</p>
+              <strong>Tel:</strong> +27 21 794 3461
+            </p>
             <p>
-              <strong>Email:</strong>
-{' '}
-belombre@mweb.co.za
-</p>
+              <strong>Cell:</strong> +27 83 794 3461
+            </p>
 
             {showSuccess ? (
               <>

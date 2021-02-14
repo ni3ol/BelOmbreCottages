@@ -6,7 +6,6 @@ import d3 from '../images/d3.svg';
 import d4 from '../images/d4.svg';
 import d5 from '../images/d5.svg';
 import d6 from '../images/d6.svg';
-import d7 from '../images/d7.svg';
 import d8 from '../images/d8.svg';
 import d9 from '../images/d9.svg';
 import d10 from '../images/d10.svg';
