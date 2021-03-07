@@ -105,6 +105,9 @@ const Rates = () => {
                 <p>
                   <strong>Cell:</strong> +27 83 794 3461
                 </p>
+                <p>
+                  <strong>Website:</strong> www.belombrecottages.co.za
+                </p>
               </Grid.Column>
               <Grid.Column>
                 {showSuccess ? (
@@ -337,6 +340,11 @@ const Rates = () => {
             <p>
               <strong>Cell:</strong> +27 83 794 3461
             </p>
+            <p>
+              <strong>Website:</strong>
+{' '}
+www.belombrecottages.co.za
+</p>
 
             {showSuccess ? (
               <>

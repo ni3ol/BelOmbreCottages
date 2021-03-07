@@ -15,12 +15,10 @@ const Rates = () => (
           <Grid.Row className={styles.body}>
             <Grid.Column>
               <p>
-                From 
-{' '}
-<strong>R725/pp per night sharing</strong>
+                From <strong>R750/pp per night sharing</strong>
 , depending on
                 sharing.
-              </p>
+</p>
               <p>Single rates on request.</p>
               <p>A 50% deposit is required to secure the booking.</p>
               <p>No credit card facilities available.</p>
@@ -38,10 +36,12 @@ const Rates = () => (
           <Grid.Row className={styles.body}>
             <Grid.Column>
               <p>
-                From <strong>R725/pp per night sharing</strong>
+                From 
+{' '}
+<strong>R750/pp per night sharing</strong>
 , depending on
                 sharing.
-</p>
+              </p>
               <p>Single rates on request.</p>
               <p> A 50% deposit is required to secure the booking.</p>
               <p>No credit card facilities available.</p>
@@ -55,9 +55,7 @@ const Rates = () => (
       <Media at="mobile">
         <Header className={styles.header}>Rates</Header>
         <p style={{ textAlign: 'center' }}>
-          From 
-{' '}
-<strong>R725/pp per night sharing</strong>
+          From <strong>R750/pp per night sharing</strong>
           , depending on sharing.
           <br />
           Single rates on request.
