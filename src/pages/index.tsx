@@ -15,6 +15,7 @@ init('user_I9XUzzlLBgjlABVvSh0m2');
 const RootIndex = () => {
   return (
     <>
+      <SEO />
       <script src="https://cdn.jsdelivr.net/npm/semantic-ui-calendar-react@latest/dist/umd/semantic-ui-calendar-react.js" />
       <MediaContextProvider>
         <Container>
