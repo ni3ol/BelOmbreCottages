@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import { Grid, Container, Header } from 'semantic-ui-react';
-import { init } from 'emailjs-com';
 import Navigation from '../components/navigation';
 import { Media, MediaContextProvider } from '../media';
 import styles from './index.module.css';
@@ -9,8 +8,6 @@ import { SEO } from '../components/seo';
 import Hero from '../images/hero.svg';
 import Hero1 from '../images/hero1.svg';
 import Hero2 from '../images/hero2.svg';
-
-init('user_I9XUzzlLBgjlABVvSh0m2');
 
 const RootIndex = () => {
   return (
