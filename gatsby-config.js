@@ -6,8 +6,8 @@ require('dotenv').config({
 const path = require(`path`);
 
 const siteMetadata = {
-  title: 'My site',
-  titleTemplate: '%s - My site',
+  title: 'Bel Ombre Cottages',
+  titleTemplate: '%s - Bel Ombre Cottages',
   siteUrl: 'https://mysite.co.za',
   image: 'images/my-site.png',
   description: 'My shiny new Gatsby site',
