@@ -15,9 +15,9 @@ const Rates = () => (
           <Grid.Row className={styles.body}>
             <Grid.Column>
               <p>
-                From <strong>R750/pp per night sharing</strong>
+                From <strong>R750 per person per night</strong>
 , depending on
-                sharing.
+                persons sharing per night.
 </p>
               <p>Single rates on request.</p>
               <p>A 50% deposit is required to secure the booking.</p>
