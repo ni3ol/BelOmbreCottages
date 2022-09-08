@@ -40,6 +40,9 @@ const Rates = () => {
                   <strong>Email:</strong> belombre@mweb.co.za
                 </p>
                 <p>
+                  <strong>Cell:</strong> +27 83 794 3461
+                </p>
+                <p>
                   <strong>Website:</strong> www.belombrecottages.co.za
                 </p>
               </Grid.Column>
@@ -103,6 +106,9 @@ const Rates = () => {
             </p>
             <p>
               <strong>Email:</strong> belombre@mweb.co.za
+            </p>
+            <p>
+              <strong>Cell:</strong> +27 83 794 3461
             </p>
             <p>
               <strong>Website:</strong> www.belombrecottages.co.za
