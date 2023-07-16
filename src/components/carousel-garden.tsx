@@ -12,18 +12,18 @@ const garden = [
     original: g1,
     thumbnail: g1,
   },
-  {
-    original: g2,
-    thumbnail: g2,
-  },
+  // {
+  //   original: g2,
+  //   thumbnail: g2,
+  // },
   {
     original: g3,
     thumbnail: g3,
   },
-  {
-    original: g4,
-    thumbnail: g4,
-  },
+  // {
+  //   original: g4,
+  //   thumbnail: g4,
+  // },
 ];
 
 export default class CarouselPool extends React.Component {
