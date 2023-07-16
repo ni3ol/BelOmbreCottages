@@ -14,10 +14,10 @@ const cottageOne = [
     original: c1,
     thumbnail: c1,
   },
-  {
-    original: c2,
-    thumbnail: c2,
-  },
+  // {
+  //   original: c2,
+  //   thumbnail: c2,
+  // },
   {
     original: bedroom,
     thumbnail: bedroom,
