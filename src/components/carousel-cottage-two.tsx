@@ -1,63 +1,58 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import d1 from '../images/d1.svg';
-import d2 from '../images/d2.svg';
-import d3 from '../images/d3.svg';
-import d4 from '../images/d4.svg';
-import d5 from '../images/d5.svg';
-import d6 from '../images/d6.svg';
-import d8 from '../images/d8.svg';
-import d9 from '../images/d9.svg';
-import d10 from '../images/d10.svg';
-import d11 from '../images/d11.svg';
-import d12 from '../images/d12.svg';
+import bed1 from '../images/cottage2/bed1.jpg';
+import bed2 from '../images/cottage2/bed2.jpg';
+import kitchen from '../images/cottage2/kitchen.jpg';
+import lounge from '../images/cottage2/lounge.jpg';
+import lounge2 from '../images/cottage2/lounge2.jpg';
+import bath from '../images/cottage2/bath.jpg';
+import stairs from '../images/cottage2/stairs.jpg';
+import exterior from '../images/cottage2/exterior.jpg';
+import garden from '../images/cottage2/garden.jpg';
+import patio from '../images/cottage2/patio.jpg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 
 const cottageTwo = [
   {
-    original: d1,
-    thumbnail: d1,
+    original: exterior,
+    thumbnail: exterior,
   },
   {
-    original: d2,
-    thumbnail: d2,
+    original: bed1,
+    thumbnail: bed1,
   },
   {
-    original: d3,
-    thumbnail: d3,
+    original: bed2,
+    thumbnail: bed2,
   },
   {
-    original: d4,
-    thumbnail: d4,
+    original: kitchen,
+    thumbnail: kitchen,
   },
   {
-    original: d5,
-    thumbnail: d5,
+    original: lounge,
+    thumbnail: lounge,
   },
   {
-    original: d6,
-    thumbnail: d6,
+    original: lounge2,
+    thumbnail: lounge2,
   },
   {
-    original: d12,
-    thumbnail: d12,
+    original: bath,
+    thumbnail: bath,
   },
   {
-    original: d8,
-    thumbnail: d8,
+    original: stairs,
+    thumbnail: stairs,
   },
   {
-    original: d9,
-    thumbnail: d9,
+    original: garden,
+    thumbnail: garden,
   },
   {
-    original: d10,
-    thumbnail: d10,
-  },
-  {
-    original: d11,
-    thumbnail: d11,
+    original: patio,
+    thumbnail: patio,
   },
 ];
 

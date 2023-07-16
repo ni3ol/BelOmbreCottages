@@ -2,11 +2,10 @@ import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import c1 from '../images/c1.svg';
 import c2 from '../images/c2.svg';
-import c3 from '../images/c3.svg';
-import c4 from '../images/c4.svg';
-import c5 from '../images/c5.svg';
-import c6 from '../images/c6.svg';
-import c7 from '../images/c7.svg';
+import bedroom from '../images/cottage1/bedroom.jpg';
+import kitchen from '../images/cottage1/kitchen.jpg';
+import lounge from '../images/cottage1/lounge.jpg';
+import lounge2 from '../images/cottage1/lounge2.jpg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 
@@ -20,24 +19,20 @@ const cottageOne = [
     thumbnail: c2,
   },
   {
-    original: c3,
-    thumbnail: c3,
+    original: bedroom,
+    thumbnail: bedroom,
   },
   {
-    original: c4,
-    thumbnail: c4,
+    original: kitchen,
+    thumbnail: kitchen,
   },
   {
-    original: c5,
-    thumbnail: c5,
+    original: lounge,
+    thumbnail: lounge,
   },
   {
-    original: c6,
-    thumbnail: c6,
-  },
-  {
-    original: c7,
-    thumbnail: c7,
+    original: lounge2,
+    thumbnail: lounge2,
   },
 ];
 

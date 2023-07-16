@@ -7,6 +7,8 @@ import styles from './index.module.css';
 import { SEO } from '../components/seo';
 import Hero from '../images/hero.svg';
 import Hero1 from '../images/hero1.svg';
+import View from '../images/cottage2/garden.jpg';
+import Garden from '../images/cottage2/exterior.jpg';
 import Hero2 from '../images/hero2.svg';
 
 const RootIndex = () => {
@@ -19,7 +21,17 @@ const RootIndex = () => {
           <Navigation />
         </Container>
         <Media greaterThanOrEqual="tablet">
-          <img src={Hero} className={styles.heroImg} />
+          {/* <img src={Hero} className={styles.heroImg} /> */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '50px',
+            }}
+          >
+            <img src={Garden} />
+            <img src={View} />
+          </div>
           <Header className={styles.header}>Bel Ombre Cottages</Header>
           <Container>
             <Grid columns={2}>
