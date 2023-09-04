@@ -11,31 +11,13 @@ const Gallery = () => (
   <MediaContextProvider>
     <Layout>
       <Media greaterThanOrEqual="tablet">
-        <Header className={styles.galleryHeader}>Pool area</Header>
-        <div style={{ width: '80%', margin: 'auto' }}>
+        <div style={{ width: '80%', margin: 'auto', marginTop: 50 }}>
           <CarouselPool />
-        </div>
-        <Header className={styles.galleryHeader}>Garden</Header>
-        <div style={{ width: '80%', margin: 'auto' }}>
-          <CarouselGarden />
-        </div>
-        <Header className={styles.galleryHeader}>Property</Header>
-        <div style={{ width: '80%', margin: 'auto' }}>
-          <CarouselProperty />
         </div>
       </Media>
       <Media at="mobile">
-        <Header className={styles.subheader}>Pool area</Header>
         <div style={{ width: '80%', margin: 'auto' }}>
           <CarouselPool />
-        </div>
-        <Header className={styles.subheader}>Garden</Header>
-        <div style={{ width: '80%', margin: 'auto' }}>
-          <CarouselGarden />
-        </div>
-        <Header className={styles.subheader}>Property</Header>
-        <div style={{ width: '80%', margin: 'auto' }}>
-          <CarouselProperty />
         </div>
       </Media>
     </Layout>

@@ -30,7 +30,7 @@ const cottageTwo = [
 ];
 
 const facilities = [
-  'DSTV',
+  'DSTV (full premium)',
   'WIFI',
   'Hair dryer',
   'Pool towels included',
@@ -41,6 +41,7 @@ const facilities = [
   'Alarm system and safe',
   'Not accessible for wheelchairs',
   'Cellars Hohenort and Alphen Hotels in walking distance',
+  'No loadshedding due to solar installation',
 ];
 
 const Cottages = () => (

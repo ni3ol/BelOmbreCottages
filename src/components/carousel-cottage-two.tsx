@@ -8,8 +8,7 @@ import lounge2 from '../images/cottage2/lounge2.jpg';
 import bath from '../images/cottage2/bath.jpg';
 import stairs from '../images/cottage2/stairs.jpg';
 import exterior from '../images/cottage2/exterior.jpg';
-import garden from '../images/cottage2/garden.jpg';
-import patio from '../images/cottage2/patio.jpg';
+import patio from '../images/cottage2/cot2balcony.jpg';
 
 import 'react-image-gallery/styles/css/image-gallery.css';
 
@@ -45,10 +44,6 @@ const cottageTwo = [
   {
     original: stairs,
     thumbnail: stairs,
-  },
-  {
-    original: garden,
-    thumbnail: garden,
   },
   {
     original: patio,

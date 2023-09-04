@@ -5,11 +5,10 @@ import Navigation from '../components/navigation';
 import { Media, MediaContextProvider } from '../media';
 import styles from './index.module.css';
 import { SEO } from '../components/seo';
-import Hero from '../images/hero.svg';
-import Hero1 from '../images/hero1.svg';
-import View from '../images/cottage2/garden.jpg';
-import Garden from '../images/cottage2/exterior.jpg';
-import Hero2 from '../images/hero2.svg';
+import Home1 from '../images/home1.jpg';
+import Home2 from '../images/home2.jpg';
+import Home3 from '../images/home3.jpg';
+import Home4 from '../images/home4.jpg';
 
 const RootIndex = () => {
   return (
@@ -29,8 +28,8 @@ const RootIndex = () => {
               marginBottom: '50px',
             }}
           >
-            <img src={Garden} />
-            <img src={View} />
+            <img src={Home1} />
+            <img src={Home2} />
           </div>
           <Header className={styles.header}>Bel Ombre Cottages</Header>
           <Container>
@@ -50,12 +49,12 @@ const RootIndex = () => {
                   </p>
                 </Grid.Column>
                 <Grid.Column>
-                  <img src={Hero1} />
+                  <img src={Home3} />
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row className={styles.body}>
                 <Grid.Column>
-                  <img src={Hero2} />
+                  <img src={Home4} />
                 </Grid.Column>
                 <Grid.Column style={{ paddingLeft: 30 }}>
                   <p>
@@ -75,7 +74,7 @@ const RootIndex = () => {
           </Container>
         </Media>
         <Media at="mobile">
-          <img src={Hero} />
+          <img src={Home1} />
           <Header className={styles.mobileHeader}>Bel Ombre Cottages</Header>
 
           <div
@@ -91,7 +90,7 @@ const RootIndex = () => {
               easily explore Cape Town and then retire to the peaceful comfort
               of the well appointed cottages.
             </p>
-            <img src={Hero1} />
+            <img src={Home2} />
             <p>
               Over the years we have established an excellent reputation with
               our local and overseas guests returning year after year.
@@ -102,7 +101,7 @@ const RootIndex = () => {
               wine farms and golf courses. The Bel Ombre Meadow and Alphen Walk
               are in close proximity for walking.
             </p>
-            <img src={Hero2} />
+            <img src={Home3} />
           </div>
         </Media>
       </MediaContextProvider>
