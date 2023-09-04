@@ -28,8 +28,8 @@ const RootIndex = () => {
               marginBottom: '50px',
             }}
           >
-            <img src={Home1} />
             <img src={Home2} />
+            <img src={Home1} />
           </div>
           <Header className={styles.header}>Bel Ombre Cottages</Header>
           <Container>
